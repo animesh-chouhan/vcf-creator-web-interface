@@ -1,8 +1,9 @@
 import os
 from time import time
 from vcf_creator.vcf import vcard_generator
-from flask import Flask, render_template, request, redirect, url_for, abort
+from flask import Flask, render_template, request, abort
 from werkzeug.utils import secure_filename, send_file
+from werkzeug.wrappers import response
 
 app = Flask(__name__)
 app.config['UPLOAD_EXTENSIONS'] = ["csv"]
@@ -32,15 +33,20 @@ def upload_file():
     directory = os.path.join(app.root_path, "processed")
     if not os.path.exists(directory):
         os.makedir(directory)
-    vcf_file = os.path.join(app.root_path, "processed", csv_file.split(".")[0] + ".vcf")
-    with open(vcf_file, "w") as f:
+    vcf_file_path = os.path.join(app.root_path, "processed", csv_file.split(".")[0] + ".vcf")
+    with open(vcf_file_path, "w") as f:
         res = vcard_generator(csv_file_path)
         if res != -1:
             f.write(res)
         else:
             abort(400, "Some error occured. Contact the developer.")
-    
-    return send_file(vcf_file, as_attachment=True, environ=request.environ)
+
+    os.remove(csv_file_path)
+    @app.after_request
+    def delete(response):
+        os.remove(vcf_file_path)
+        return response
+    return send_file(vcf_file_path, as_attachment=True, environ=request.environ)
 
 if __name__ == "__main__":
     app.run()

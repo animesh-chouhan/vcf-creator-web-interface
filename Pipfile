@@ -4,9 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-flask = "*"
-vcf-creator = "*"
+Flask = "*"
 gunicorn = "*"
+vcf-creator = "*"
 
 [dev-packages]
 

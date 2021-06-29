@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "69f26a5b72a7415a5ec9efb5cb4fafe09e8cf8714755e9c5b09579dcdf7196e5"
+            "sha256": "7df304b07637d3e6022a14fdacf0375526267909feb52f2d0837451d2da049e0"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -94,11 +94,11 @@
         },
         "vcf-creator": {
             "hashes": [
-                "sha256:4673e8694cede797413ccb24b8f2c40a296b61f46c41e57dd70c9ad56d498849",
-                "sha256:f620124863d324fedb986b04de870ab4db54220b3693dd6ac62120a32c4f9efd"
+                "sha256:302d2cb61e2340f9ae7b6e1b8fb3032da3edb7ed69c7909db9ce225b3f8d098c",
+                "sha256:b3d351a4fdcead742c9525e60b6fd3b19c734e7e47794cc27b2020eb24f113bf"
             ],
             "index": "pypi",
-            "version": "==1.0.2"
+            "version": "==1.0.3"
         },
         "werkzeug": {
             "hashes": [
