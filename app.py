@@ -21,10 +21,17 @@ def upload_file():
         file_ext = file.split(".")[1]
         if file_ext not in app.config['UPLOAD_EXTENSIONS']:
             abort(400, "The uploaded file is not a csv file. Try again!")
+        
+        directory = os.path.join(app.root_path, "uploads")
+        if not os.path.exists(directory):
+            os.makedir(directory)
         csv_file = file_name + "_" +str(int(time())) + "." + file_ext
         csv_file_path = os.path.join(app.root_path, "uploads", csv_file)
         uploaded_file.save(csv_file_path)
     
+    directory = os.path.join(app.root_path, "processed")
+    if not os.path.exists(directory):
+        os.makedir(directory)
     vcf_file = os.path.join(app.root_path, "processed", csv_file.split(".")[0] + ".vcf")
     with open(vcf_file, "w") as f:
         res = vcard_generator(csv_file_path)
