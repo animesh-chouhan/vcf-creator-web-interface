@@ -36,4 +36,4 @@ def upload_file():
     return send_file(vcf_file, as_attachment=True, environ=request.environ)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
