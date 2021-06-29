@@ -42,10 +42,6 @@ def upload_file():
             abort(400, "Some error occured. Contact the developer.")
 
     os.remove(csv_file_path)
-    @app.after_request
-    def delete(response):
-        os.remove(vcf_file_path)
-        return response
     return send_file(vcf_file_path, as_attachment=True, environ=request.environ)
 
 if __name__ == "__main__":
