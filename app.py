@@ -3,7 +3,6 @@ from time import time
 from vcf_creator.vcf import vcard_generator
 from flask import Flask, render_template, request, abort
 from werkzeug.utils import secure_filename, send_file
-from werkzeug.wrappers import response
 
 app = Flask(__name__)
 app.config['UPLOAD_EXTENSIONS'] = ["csv"]
