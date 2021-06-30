@@ -98,31 +98,31 @@
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
           <div class="icon-box">
             <div class="icon"><i class="ri-stack-line"></i></div>
-            <h4 class="title"><a href="">Create</a></h4>
+            <h4 class="title">Create</h4>
             <p class="description">Create a Google Form for collecting the contacts &nbsp;</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
           <div class="icon-box">
-            <div class="icon"><i class="ri-palette-line"></i></div>
-            <h4 class="title"><a href="">Share</a></h4>
+            <div class="icon"><i class="ri-share-line"></i></i></div>
+            <h4 class="title">Share</h4>
             <p class="description">Share the Google form with friends or colleagues</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
           <div class="icon-box">
-            <div class="icon"><i class="ri-command-line"></i></div>
-            <h4 class="title"><a href="">Export</a></h4>
+            <div class="icon"><i class="ri-file-excel-2-line"></i></div>
+            <h4 class="title">Export</h4>
             <p class="description">Export the spreadsheet as .csv file &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="500">
           <div class="icon-box">
-            <div class="icon"><i class="ri-fingerprint-line"></i></div>
-            <h4 class="title"><a href="">Upload</a></h4>
+            <div class="icon"><i class="ri-upload-2-line"></i></div>
+            <h4 class="title">Upload</h4>
             <p class="description">Upload the CSV file to the website &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
           </div>
         </div>
@@ -154,7 +154,7 @@
                 <h3>Steps:</h3>
                 <ol>
                   <li class="steps">Create a Google Form with the Contact Information Template.</li>
-                  <li class="steps">Add the following fields to form (fieldnames should be exactly the same):
+                  <li class="steps">Add the following fields to form (Field names should be exactly the same):
                     <ol>
                       <li>Name</li>
                       <li>Phone</li>
@@ -168,7 +168,8 @@
                   <li class="steps">Make sure that a person can fill the form only once. This can be enabled in form options.</li>
                   <li class="steps">Collect all the responses.</li>
                   <li class="steps">Export the Spreadsheet as CSV file.</li>
-                  <li class="steps">Upload the CSV file to this website.</li>
+                  <li class="steps">Upload the CSV file to this website and download vCard.</li>
+                  <li class="steps">Import the contacts on Google Contacts.</li>
                   <li class="steps">Enjoy!</li>
   
                 </ol>
@@ -177,10 +178,22 @@
           
           </div>
           <div class="col-lg-6 mt-3 d-flex justify-content-center">
-            <form method="POST" action="" enctype="multipart/form-data">
+            <!-- <form method="POST" action="" enctype="multipart/form-data">
               <p><input type="file" name="file" accept=".csv"></p>
               <p><input type="submit" value="Submit"></p>
-            </form>
+            </form> -->
+            
+            <div class="card w-70 text-center align-self-center">
+              <div class="mt-5 mb-4">
+                <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 16" height="16mm" width="22mm"><path data-v-4e85f282="" d="M.787 6.411l10.012 5.222a.437.437 0 0 0 .402 0l10.01-5.222a.434.434 0 0 0 .186-.585.45.45 0 0 0-.186-.187L11.2.417a.441.441 0 0 0-.404 0L.787 5.639a.439.439 0 0 0-.184.588.453.453 0 0 0 .184.184z" fill="#DDDFE1"></path><path data-v-4e85f282="" d="M21.21 9.589l-1.655-.864-7.953 4.148a1.31 1.31 0 0 1-1.202 0L2.444 8.725l-1.657.864a.437.437 0 0 0-.184.583.427.427 0 0 0 .184.187l10.012 5.224a.437.437 0 0 0 .402 0l10.01-5.224a.434.434 0 0 0 .186-.586.444.444 0 0 0-.186-.184z" fill="#EDEFF0"></path></svg>
+              </div>
+              <div class="card-body input-group text-center mb-5">
+                <form method="POST" action="" enctype="multipart/form-data">
+                  <p><input class="form-control" type="file" name="file" accept=".csv"></p>
+                  <p><button class="btn btn-primary btn-lg mt-3 mb-3" type="submit" value="Upload CSV"><span><i class="ri-upload-2-line"></i></span>&nbsp;&nbsp;Upload CSV</button></p>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -216,28 +229,28 @@
             </li>
 
             <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">How do I add another field to VCF? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                  Contact the developer at animeshsingh38@gmail.com.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">How to import the contacts to my mobile phone? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                  Go to https://contacts.google.com/ and import the contacts using the generated vCard file. Make sure that the phone is using Google Contacts.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="400">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">What do I do when I get Internal Server Error 500? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                  Contact the developer at animeshsingh38@gmail.com.
                 </p>
               </div>
             </li>
