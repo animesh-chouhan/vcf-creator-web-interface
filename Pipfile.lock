@@ -94,11 +94,11 @@
         },
         "vcf-creator": {
             "hashes": [
-                "sha256:4227727da4e30fa455e56f12bee684085252bfe71e0fbfa98c3af5a7cf9092b0",
-                "sha256:49b945d33f7664efe752b88ce4daeb920b7f182eb0ff1c5ca480db83a57865c7"
+                "sha256:0766a9b89cba24042e617d794fafc7862d57b1062721817fba285a7530985e06",
+                "sha256:7ef7b8d18d94065d1dc4696dc995e1c0a99ea37792b95b11e64877462097df0c"
             ],
             "index": "pypi",
-            "version": "==1.0.7"
+            "version": "==1.0.8"
         },
         "werkzeug": {
             "hashes": [
