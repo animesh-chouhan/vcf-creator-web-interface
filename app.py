@@ -5,22 +5,24 @@ from flask import Flask, render_template, request, abort
 from werkzeug.utils import secure_filename, send_file
 
 app = Flask(__name__)
-app.config['UPLOAD_EXTENSIONS'] = ["csv"]
+app.config['UPLOAD_EXTENSIONS'] = ["csv", "CSV"]
+
 
 @app.route('/')
 def index():
     return render_template("index.html")
+
 
 @app.route('/', methods=['POST'])
 def upload_file():
     # Get the uploaded file
     uploaded_file = request.files['file']
     file = secure_filename(uploaded_file.filename)
-    
+
     # Check if no file is provided
     if file == '':
         abort(400, "No file provided")
-    else:    
+    else:
         file_name = file.split(".")[0]
         file_ext = file.split(".")[1]
         # Check the extension of file
@@ -39,7 +41,8 @@ def upload_file():
             directory = os.path.join(app.root_path, "processed")
             if not os.path.exists(directory):
                 os.mkdir(directory)
-            vcf_file_path = os.path.join(app.root_path, "processed", csv_file.split(".")[0] + ".vcf")
+            vcf_file_path = os.path.join(
+                app.root_path, "processed", csv_file.split(".")[0] + ".vcf")
             # Write the VCF file
             with open(vcf_file_path, "w") as f:
                 res = vcard_generator(csv_file_path)
@@ -60,6 +63,7 @@ def upload_file():
             # Remove temp files
             os.remove(csv_file_path)
             return send_file(vcf_file_path, as_attachment=True, environ=request.environ)
+
 
 if __name__ == "__main__":
     app.run()

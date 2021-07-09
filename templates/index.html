@@ -4,12 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="description" content="">
 
   <title>VCF Creator</title>
   <meta name="author" content="Animesh Singh Chouhan">
-  <meta content="Generate vCard file from CSV" name="description">
-  <meta content="VCF, VCF to CSV, VCF Creator, Animesh Singh Chouhan," name="keywords">
+  <meta name="description" content="Generate vCard file from CSV" >
+  <meta name="keywords" content="VCF, VCF to CSV, VCF Creator, Contacts, Animesh Singh Chouhan">
 
   <!-- Sharing website -->
   <meta property="og:url" content="https://vcf-creator.herokuapp.com" />
@@ -136,13 +135,16 @@
 
         <div class="section-title">
           <h2>Generate VCard</h2>
-          <p>Upload the CSV file and the vCard file will be automatically downloaded </p>
+          <!-- <p>Upload the CSV file and the vCard file will be automatically downloaded </p> -->
         </div>
 
         <div class="row content">
           <div class="col-lg-6  w-80" >
             <p>
-              A vCard is the standard file format for electronic business cards and is used to import and export "contacts" to address books both online and within desktop environments. vCard files are recognized by the .vcf file extension. 
+              A vCard is the standard file format for electronic business cards and is used to import and export Contacts. vCard files are recognized by the .vcf file extension. 
+            </p>
+            <p style="font-size:14px;color:#919191">
+              NOTE: Default android browser may not work. Please use Chrome or Mozilla browser on Android.
             </p>
             <!-- <a href="https://en.wikipedia.org/wiki/VCard" class="btn-learn-more">Learn More</a> -->
           
@@ -165,9 +167,9 @@
                   <li class="steps">Make sure that a person can fill the form only once. This can be enabled in form options.</li>
                   <li class="steps">Collect all the responses.</li>
                   <li class="steps">Export the Spreadsheet as CSV file.</li>
+                  <li class="steps">Make sure that the headers are same as the <a href="static/sample.csv">sample</a> file.</li>
                   <li class="steps">Upload the CSV file to this website and download vCard.</li>
-                  <li class="steps">Import the contacts on Google Contacts.</li>
-                  <li class="steps">Enjoy!</li>
+                  <li class="steps">Import the contacts on <a href="https://contacts.google.com/">Google Contacts</a>.</li>
   
                 </ol>
               </p>
@@ -239,7 +241,7 @@
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">How to import the contacts to my mobile phone? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Go to https://contacts.google.com/ and import the contacts using the generated vCard file. Make sure that the phone is using Google Contacts.
+                  Go to Google Contacts and import the contacts using the generated vCard file. Make sure that the phone is using Google Contacts.
                 </p>
               </div>
             </li>
