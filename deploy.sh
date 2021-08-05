@@ -24,6 +24,7 @@ git commit -m "$msg"
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 git push origin main
 printf "\033[0;32mDeploying updates to Heroku...\033[0m\n"
+heroku login
 git push heroku main
 
 printf "\033[0;32mDone\033[0m\n"
