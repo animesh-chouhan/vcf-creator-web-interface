@@ -51,6 +51,33 @@ docker run --rm -it  -p 8080:8080/tcp animeshsingh38/vcf-creator-web-interface
 
 _For more examples and usage, please refer to the [Wiki][wiki]._
 
+### Publish Docker Image to Repositories:
+
+#### Build Docker Image
+
+```sh
+docker build
+```
+
+#### Dockerhub
+
+```sh
+docker login
+docker tag vcf-creator-web-interface:latest animeshsingh38/vcf-creator-web-interface:latest
+docker push animeshsingh38/vcf-creator-web-interface:latest
+```
+
+#### Github Containers
+
+```sh
+docker image rm ghcr.io/animesh-chouhan/vcf-creator-web-interface:latest
+export CR_PAT=<TOKEN>
+echo $CR_PAT | docker login ghcr.io -u animesh-chouhan --password-stdin
+docker tag vcf-creator-web-interface:latest ghcr.io/animesh-chouhan/vcf-creator-web-interface:latest
+docker push ghcr.io/animesh-chouhan/vcf-creator-web-interface:latest
+```
+
+
 ## Built With
 
 * [vcf-creator](https://github.com/animesh-chouhan/vcf-creator) - Command-line program to generate vCard file from CSV
