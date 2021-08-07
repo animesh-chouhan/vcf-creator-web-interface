@@ -6,6 +6,7 @@
 > Web interface for VCF Creator
 
 ## Links
+
 Live Website: https://vcf-creator.herokuapp.com
 
 Github: https://github.com/animesh-chouhan/vcf-creator-web-interface
@@ -56,7 +57,7 @@ _For more examples and usage, please refer to the [Wiki][wiki]._
 #### Build Docker Image
 
 ```sh
-docker build .
+docker build --pull --rm -f "Dockerfile" -t vcf-creator-web-interface .
 ```
 
 #### Dockerhub
@@ -77,10 +78,9 @@ docker tag vcf-creator-web-interface:latest ghcr.io/animesh-chouhan/vcf-creator-
 docker push ghcr.io/animesh-chouhan/vcf-creator-web-interface:latest
 ```
 
-
 ## Built With
 
-* [vcf-creator](https://github.com/animesh-chouhan/vcf-creator) - Command-line program to generate vCard file from CSV
+- [vcf-creator](https://github.com/animesh-chouhan/vcf-creator) - Command-line program to generate vCard file from CSV
 
 ## Contributing
 
@@ -91,9 +91,11 @@ docker push ghcr.io/animesh-chouhan/vcf-creator-web-interface:latest
 5. Create a new Pull Request
 
 <!-- Markdown link & img dfn's -->
+
 [license]: https://img.shields.io/github/license/animesh-chouhan/vcf-creator-web-interface
 [wiki]: https://github.com/animesh-chouhan/vcf-creator-web-interface/wiki
 
 ## License
+
 MIT License
 copyright (c) 2021 [Animesh Singh Chouhan](https://github.com/animesh-chouhan). Please have a look at the [license](LICENSE) for more details.
