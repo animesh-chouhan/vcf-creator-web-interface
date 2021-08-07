@@ -56,7 +56,7 @@ _For more examples and usage, please refer to the [Wiki][wiki]._
 #### Build Docker Image
 
 ```sh
-docker build
+docker build .
 ```
 
 #### Dockerhub
