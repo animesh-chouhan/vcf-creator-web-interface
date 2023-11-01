@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster
+FROM python:3
 
 WORKDIR /app
 
@@ -9,5 +9,6 @@ COPY . .
 RUN chmod a+x view.sh
 
 EXPOSE 8080
+
 # CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=8080"]
-CMD [ "./view.sh"]
+ENTRYPOINT [ "gunicorn", "--workers", "2", "-b", "0.0.0.0:8080", "app:app" ]

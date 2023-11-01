@@ -7,13 +7,13 @@
 
 ## Links
 
-Live Website: https://vcf-creator.herokuapp.com
+Live Website: https://vcf.animeshchouhan.com/
 
 Github: https://github.com/animesh-chouhan/vcf-creator-web-interface
 
 ## Setup
 
-### Cloning the repository:
+### Cloning the repository
 
 ```sh
 # Clone the repo
@@ -21,7 +21,7 @@ git clone https://github.com/animesh-chouhan/vcf-creator-web-interface.git
 cd vcf-creator-web-interface
 ```
 
-### Installing dependencies:
+### Installing dependencies
 
 Using pip and requirements.txt:
 
@@ -36,7 +36,7 @@ pipenv shell
 pipenv install
 ```
 
-### Running the script:
+### Running the script
 
 ```sh
 # Make view.sh executable
@@ -44,15 +44,15 @@ chmod a+x view.sh
 ./view.sh
 ```
 
-### Docker:
+### Docker
 
 ```sh
-docker run --rm -it  -p 8080:8080/tcp animeshsingh38/vcf-creator-web-interface
+docker run --rm -it -p 8080:8080/tcp animeshchouhan/vcf-creator-web-interface
 ```
 
 _For more examples and usage, please refer to the [Wiki][wiki]._
 
-### Publish Docker Image to Repositories:
+### Publish Docker Image to Repositories
 
 #### Build Docker Image
 
@@ -64,8 +64,8 @@ docker build --pull --rm -f "Dockerfile" -t vcf-creator-web-interface .
 
 ```sh
 docker login
-docker tag vcf-creator-web-interface:latest animeshsingh38/vcf-creator-web-interface:latest
-docker push animeshsingh38/vcf-creator-web-interface:latest
+docker tag vcf-creator-web-interface:latest animeshchouhan/vcf-creator-web-interface:latest
+docker push animeshchouhan/vcf-creator-web-interface:latest
 ```
 
 #### Github Containers
